@@ -1,0 +1,14 @@
+.head-bg{
+    background-color: #031633;
+}
+
+.hero-bg{
+    background-color: 
+    #21262d;
+}
+
+.custom-card-img{
+    object-fit: cover;
+
+    height: 200px;
+}
