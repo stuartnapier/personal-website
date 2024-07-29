@@ -30,8 +30,7 @@ header{
     align-items: center;
     padding-left: 15%;
     padding-right: 15%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    height: 64px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
 }
@@ -39,35 +38,40 @@ header{
 .header-container  p,a,li {
     color: var(--light-text);
     text-decoration: none;
+    padding-bottom: 0px;
 }
 
-.header-list{
+.header-content-left{
     display: flex;
     align-items: center;
     gap: 20px;
+    height: 100%;
 }
 
-.header-list > * {
-    border-bottom: 2px transparent;
+.header-content-left > *{
+    height: 100%;
+    display: flex;
+    align-items: center;
+
 }
 
-.header-list > *:hover{
-    border-bottom: 2px solid grey;
+.header-content-left > *:hover{
+    box-sizing: border-box;
+    border-bottom: 2px solid var(--yale-blue);
+    border-top: 2px solid transparent;
 }
 
-.header-list svg{
+.header-content-left svg{
     height:25px;
     width: 25px;
-    padding-top: 3px;
     color: white;
 }
 
-.header-list .header-text-icon{
+.header-content-left .header-text-icon{
     display: flex;
-    /* padding-top: 3px; */
 }
 
-.header-list .header-small-icon{
+.header-content-left .header-small-icon{
     padding-left: 5px;
     height: 14px;
     width: 14px;
@@ -120,8 +124,10 @@ header{
 
 /* XL screen - large desktop */
 @media screen and (min-width: 992px){
-    .header-burger{
+    .hide-large{
         display: none;
+        padding: 0px;
+        margin: 0px;
     }
     .header-small-middle{
         display: none;
@@ -153,14 +159,14 @@ header{
         display: none;
     }
 
-    .header-list{
+    .header-content-left{
         width: 33%;
     }
     .header-small-middle{
         width: 33%;
         display: flex;
         justify-content: center;
-        gap: 10px;
+        gap: 0.5rem;
     }
     .header-end{
         display: flex;
@@ -289,6 +295,9 @@ header{
 }
 
 .project-card-desc{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
     padding-left: 20px;
     padding-top: 5px;
     padding-right: 10px;
@@ -330,9 +339,49 @@ header{
     padding: 2px 5px 2px 5px;
     font-size: 0.8rem;
     font-weight: 400;
-    background-color: red;
     border-radius: 5px;
     border-style: none;
+}
+
+.html {
+    background-color: green;
+}
+.css {
+    background-color: yellow;
+    color: black;
+}
+.javascript {
+    background-color: red;
+    /* color: black; */
+}
+.jquery {
+    background-color: aqua;
+    color: black;
+}
+
+.r {
+    background-color: blue;
+}
+
+.data-viz {
+    background-color: orange;
+    color: black;
+}
+.data-analysis {
+    background-color: pink;
+    color: black;
+}
+
+.python {
+    background-color: greenyellow;
+    color: black;
+}
+.scraping {
+    background-color: black;
+}
+.nlp {
+    background-color: rgb(47, 255, 255);
+    color: black;
 }
 
 /* Large screen and above */
@@ -417,3 +466,4 @@ header{
     height: 50px;
     background-color: var(--rich-black);
   }
+
