@@ -16,6 +16,7 @@ padding: 0;
 
 header{
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
@@ -77,6 +78,27 @@ header{
     width: 14px;
 }
 
+.project-dropdown {
+    position: absolute;
+    top: 64px;
+    /* height: 100px;
+    width:50px; */
+    background-color: white;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-dropdown li{
+    color: black;
+    list-style: none;
+    padding-bottom: 5px;
+    font-size: 1.25rem;
+}
+
 .header-end{
     display: flex;
     gap: 20px;
@@ -107,19 +129,8 @@ header{
     color: white;
 }
 
-.header-burger ul{
-    display: flex;
-    align-items: center;
-    float: left;
-    margin: 0px;
-    list-style-type: none;
-}
-
-.header-burger li {
-    display: block;
-    padding-left: 5px;
-    padding-right: 5px;
-    /* border: 1px solid red; */
+.burger-dropdown {
+    display: none;
 }
 
 /* XL screen - large desktop */
@@ -150,9 +161,7 @@ header{
         padding-right: 5%;
         display: flex;
         justify-content: space-between;
-    }
-    .header-container:hover{
-        background-color: aquamarine;
+        padding-bottom: 0px;
     }
 
     .header-container .hide-small{
@@ -176,13 +185,34 @@ header{
         margin-right: 0px;
     }
 
+    .burger-dropdown {
+        /* visibility: visible; */
+        display: none;
+        margin-bottom: 10px;
+    }
+
+    .burger-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .burger-items {
+        margin-top: 64px;
+    }
+    .burger-dropdown a{
+        /* margin-top: 64px; */
+        color: black;
+    }
   }
+
+
 
   /* || Hero section */
   .hero-background{
 
     width: 100%;
-    margin-top: 60px;
+    margin-top: 64px;
     padding-bottom: 120px;
     background-color: var(--oxford-blue);
   }
@@ -216,7 +246,7 @@ header{
     padding-top: 10px;
   }
 
-  .hero-link{
+  .hero-background .hero-link{
     display: flex;
     align-items: center;
     gap: 5px;
@@ -232,8 +262,8 @@ header{
     width: 400px;
   }
 
-/* Medium and Small screen - phone */
-@media screen and (max-width: 992px) {
+  /* Medium and Small screen - phone */
+  @media screen and (max-width: 992px) {
     .hero-container{
         flex-wrap: wrap;
         padding-top: 50px;
@@ -260,30 +290,34 @@ header{
     padding-right: 15%;
     padding-top: 50px;
     padding-bottom: 50px;
+
 }
 
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 2.5%;
+}
 
+ 
 .features-background h2{
     margin-bottom: 25px;
     color: var(--light-text);
     border-bottom: solid gray 0.5px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
-}
-
-.card-container{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 0px;
-    gap: 10px;
-}
+    grid-column: span 3;
+} 
 
 .project-card{
     color: var(--light-text);
     background-color: var(--yale-blue);
     border: solid var(--light-text) 1px;
     border-radius: 5px;
-    width: 325px;
+    font-family: 'Noto Sans', sans-serif;
+    position: relative;
+    min-width: 250px;
 }
 
 .project-card > img{
@@ -294,17 +328,13 @@ header{
     border-top-right-radius: 4px;
 }
 
-.project-card-desc{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
-    padding-left: 20px;
-    padding-top: 5px;
-    padding-right: 10px;
-    padding-bottom: 20px;
+.project-info {
+    margin: 10px 15px 75px 15px;
     font-family: 'Noto Sans', sans-serif;
-
+    /* padding: 10px 10px 10px 10px; */
 }
+
+
 
 .project-card h5{
     font-weight: 500;
@@ -314,29 +344,31 @@ header{
 
 .project-card p{
     font-weight: 300;
-    font-size: 1rem;
-    padding-bottom: 10px;
+}
+
+.project-footer {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
 }
 
 .project-card a{
+    display: inline-block;
     font-weight: 400;
     font-size: 1rem;
-    padding-bottom: 20px;
-}
-
-.project-card-pills{
-    display: flex;
+    /* padding-bottom: 10px; */
 }
 
 .project-card ul{
-    list-style-type: none;
-    padding-top: 10px;
+    list-style: none;
+    display:flex;
+    gap: 5px;
 }
 
-.project-card-pills li{
-    display: inline;
+.project-card li {
     margin-top: 5px;
-    padding: 2px 5px 2px 5px;
+    margin-bottom: 10px;
+    padding: 1px 7px 2px 5px;
     font-size: 0.8rem;
     font-weight: 400;
     border-radius: 5px;
@@ -350,10 +382,9 @@ header{
     background-color: yellow;
     color: black;
 }
-.javascript {
+ .javascript {
     background-color: red;
-    /* color: black; */
-}
+ }
 .jquery {
     background-color: aqua;
     color: black;
@@ -384,73 +415,53 @@ header{
     color: black;
 }
 
+
 /* Large screen and above */
-@media screen and (min-width: 1200px){
-    .project-card{
-        min-width: 300px;
-        width: 30%;
-    }
-}
 
 /* Large screen - laptop */
 @media screen and (max-width: 1200px) and (min-width: 992px){
     .card-container{
-        flex-wrap: wrap;
-        gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px
     }
 
     .project-card{
         width: 800px;
-        max-height: 200px;
-        height: 30%;
+        height: 200px;
+        /* height: 30%; */
         display: flex;
-    }
-    .project-card-desc{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
 
     }
-    .project-card-desc a{
-        padding-top: 0px;
-        padding-bottom: 0px;
-    }
-    .project-card-desc a{
-        padding-top: 0px;
-        padding-bottom: 0px;
-    }
 
-    .project-card-pills{
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        justify-self: flex-end;
+    .project-footer {
+        position: absolute;
+        bottom: 5px;
+        left: 335px;
     }
-
-
+    
     .project-card img{
-        min-width: 40%;
+        width: 320px;
+        height: 200px;
+        object-fit: cover;
         border-top-right-radius:unset;
         border-bottom-left-radius: 4px;
     }
-}
+} 
 
 
 /* Medium and Small screen - phone */
 @media screen and (max-width: 992px) {
     .card-container{
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
         gap: 20px;
+        max-width: 350px;
+        margin: auto;
     }
     .project-card{
-        width: 100%;
-        max-width: 350px;
 
     }
-
   }
 
   /* || Jumbotron */
@@ -459,7 +470,7 @@ header{
     width: 100%;
     height: 200px;
     background-color: var(--yale-blue);
-  }
+  } 
 
   .footer-background{
     width: 100%;

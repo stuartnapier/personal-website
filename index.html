@@ -16,12 +16,14 @@
     <header>
       <div class="header-container">
         <div class="header-content-left">
-          <svg
+          <button class="burger-button hide-large" >
+            <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
             fill="currentColor"
             class="bi bi-list hide-large"
+
             viewBox="0 0 16 16"
           >
             <path
@@ -29,6 +31,10 @@
               d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
             />
           </svg>
+          </button>
+
+
+          
 
           <a href="./index.html">
             <svg
@@ -157,6 +163,16 @@
         </div>
       </div>
     </header>
+    <section class="burger-dropdown ">
+      <div class="burger-items">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About me</a></li>
+          <li><a href="">CV</a></li>
+          <li><a href="">Projects</a></li>
+        </ul>
+      </div>
+    </section>
     <section class="hero-background">
       <div class="hero-container">
         <div class="hero-card">
@@ -195,87 +211,111 @@
       </div>
     </section>
     <section class="features-background">
-      <div>
-        <h2>Featured Projects</h2>
-      </div>
+      <h2>Featured Projects</h2>
       <div class="card-container">
         <div class="project-card">
           <img src="./assets/website-sample-pic.png" alt="" />
-          <div class="project-card-desc">
-            <h5>This Website!</h5>
-            <p>
-              Built from the ground up as I learned, this website showcases my
-              ability to build a responsive, modern looking website. Take a look
-              around!
-            </p>
-            <a href="">Read more about this project</a>
-            <div class="project-card-pills">
-              <ul>
-                <li class="html">HTML</li>
-                <li class="css">CSS</li>
-                <li class="javascript">JavaScript</li>
-                <li class="jquery">jQuery</li>
-              </ul>
+          <div class="project-info">
+            <div class="project-text">
+              <h5>This Website!</h5>
+              <p>
+                Built from the ground up as I learned, this website showcases my
+                ability to build a responsive, modern looking website. Take a
+                look around!
+              </p>
             </div>
+          </div>
+          <div class="project-footer">
+            <a href="" class="">Read More about this project            
+              <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class=""
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              ></path>
+            </svg></a>
+
+            <ul>
+              <li class="html">HTML</li>
+              <li class="css">CSS</li>
+              <li class="javascript">JavaScript</li>
+              <li class="jquery">jQuery</li>
+            </ul>
           </div>
         </div>
         <div class="project-card">
           <img src="./assets/coffee.jpg" alt="" />
-          <div class="project-card-desc">
-            <h5>Coffee Data Analysis</h5>
-            <p>
-              My exploratory data analysis, dashboard building and data
-              visualisation skills got put to use looking at America's biggest
-              ever coffee tasting event.
-            </p>
-            <a href="">Read more about this project</a>
-            <div class="project-card-pills">
-              <ul>
-                <li class="r">R</li>
-                <li class="data-viz">Data Visualisation</li>
-                <li class="data-analysis">Data Analysis</li>
-              </ul>
+          <div class="project-info">
+            <div class="project-text">
+              <h5>Coffee Data Analysis</h5>
+              <p>
+                My exploratory data analysis, dashboard building and data visualisation skills got put to use looking at America's biggest ever coffee tasting event.
+              </p>
             </div>
           </div>
-        </div>
+          <div class="project-footer">
+            <a href="" class="">Read More about this project            
+              <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class=""
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              ></path>
+            </svg></a>
+
+            <ul>
+              <li class="r">R</li>
+              <li class="data-viz">Data Visualisation</li>
+              <li class="data-analysis">Data Analysis</li>
+            </ul>
+          </div></div>
         <div class="project-card">
           <img src="./assets/wordle_big_animation2.gif" alt="" />
-          <div class="project-card-desc">
-            <h5>Wordle Whatsapp Analyser</h5>
-            <p>
-              When your family member claims to be better than you at wordle,
-              not many people's reaction would be to write a Python script
-              scraping and analysing the data...
-            </p>
-            <a href="">Read more about this project</a>
-            <div class="project-card-pills">
-              <ul>
-                <li class="python">Python</li>
-                <li class="scraping">Data Scraping</li>
-                <li class="nlp">NLP</li>
-              </ul>
+          <div class="project-info">
+            <div class="project-text">
+              <h5>Wordle Whatsapp Analyser</h5>
+              <p>
+                When your family member claims to be better than you at wordle, not many people's reaction would be to write a Python script scraping and analysing the data...
+              </p>
             </div>
           </div>
-        </div>
+          <div class="project-footer">
+            <a href="" class="">Read More about this project            
+              <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class=""
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              ></path>
+            </svg></a>
+
+            <ul>
+              <li class="python">Python</li>
+              <li class="scraping">Data Scraping</li>
+              <li class="nlp">Text Data</li>
+            </ul>
+          </div>
+        </div></div>
       </div>
-      <div class="feature-end-link">
-        <a class="hero-link" href="#">
-          Explore all projects
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class=""
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
-            ></path>
-          </svg>
-        </a>
-      </div>
+      
     </section>
     <section class="jumbotron">
       <div class="jumbotron-background"></div>
