@@ -11,7 +11,7 @@ $(".hero-link").on("mouseleave", function(event){
 
 
    	
-
+// toggles the visibility of the burger drop down menu
 $( ".burger-button" ).on( "click", function() {
     $( ".burger-dropdown" ).toggle();
   });

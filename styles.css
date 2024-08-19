@@ -15,7 +15,7 @@ padding: 0;
 }
 
 header{
-    position: fixed;
+    position: sticky;
     z-index: 1;
     top: 0;
     left: 0;
@@ -78,11 +78,9 @@ header{
     width: 14px;
 }
 
-.project-dropdown {
+/* .project-dropdown {
     position: absolute;
     top: 64px;
-    /* height: 100px;
-    width:50px; */
     background-color: white;
     padding-top: 10px;
     padding-left: 10px;
@@ -97,7 +95,7 @@ header{
     list-style: none;
     padding-bottom: 5px;
     font-size: 1.25rem;
-}
+} */
 
 .header-end{
     display: flex;
@@ -186,9 +184,7 @@ header{
     }
 
     .burger-dropdown {
-        /* visibility: visible; */
         display: none;
-        margin-bottom: 10px;
     }
 
     .burger-button {
@@ -198,7 +194,7 @@ header{
     }
 
     .burger-items {
-        margin-top: 64px;
+        /* margin-top: 64px; */
     }
     .burger-dropdown a{
         /* margin-top: 64px; */
@@ -212,7 +208,7 @@ header{
   .hero-background{
 
     width: 100%;
-    margin-top: 64px;
+
     padding-bottom: 120px;
     background-color: var(--oxford-blue);
   }
