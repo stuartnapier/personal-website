@@ -127,9 +127,55 @@ header{
     color: white;
 }
 
-.burger-dropdown {
-    display: none;
+#popover-container{
+    display:flex;
+    justify-content: center;
+    width: 100%;
 }
+
+#contact-popup{
+    padding:40px;
+    background-color: var(--rich-black);
+    font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+}
+
+#contact-popup *{
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Noto Sans', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#contact-popup h2{
+    color: var(--light-text)
+}
+
+#contact-popup div{
+    margin-top: 20px;
+    text-align: center;
+}
+
+#contact-popup button{
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: var(--light-text);
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: var(--light-text);
+    cursor: pointer;
+}
+
 
 /* XL screen - large desktop */
 @media screen and (min-width: 992px){
@@ -139,6 +185,10 @@ header{
         margin: 0px;
     }
     .header-small-middle{
+        display: none;
+    }
+
+    .burger-dropdown, .burger-items{
         display: none;
     }
 }
@@ -183,9 +233,7 @@ header{
         margin-right: 0px;
     }
 
-    .burger-dropdown {
-        display: none;
-    }
+
 
     .burger-button {
         background-color: transparent;
@@ -193,8 +241,23 @@ header{
         cursor: pointer;
     }
 
+    .burger-dropdown {
+        display: none;
+        position: absolute;
+        background-color: red;
+        padding: 64px 0px 64px 0px;
+        width: 100%;
+    }
     .burger-items {
         /* margin-top: 64px; */
+        background-color: green;
+        padding-left: 20px;
+    }
+
+    .burger-items li{
+        /* margin-top: 64px; */
+
+        list-style: none;
     }
     .burger-dropdown a{
         /* margin-top: 64px; */
@@ -256,6 +319,10 @@ header{
   .hero-picture {
     border-radius: 10px;
     width: 400px;
+  }
+
+  .hero-link > svg {
+    position: relative;
   }
 
   /* Medium and Small screen - phone */

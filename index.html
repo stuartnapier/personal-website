@@ -121,7 +121,17 @@
             </svg>
           </a>
 
-          <button class="contact-button">Contact me</button>
+          <button class="contact-button" popovertarget="contact-popup">Contact me</button>
+          <div popover id="contact-popup">
+              <h2>Contact details</h2>
+              <hr>
+              <p>If you would like to get in touch with me in a professional capacity then please message me on LinkedIn</p>
+              <p>Or feel free to reach out to me on my social media pages or send me an email at *email hidden*.</p>
+              <div>
+                <button popovertarget="contact-popup" popovertargetaction="hide">Close</button>
+              </div>
+              
+          </div>
         </div>
         <div class="header-small-middle">
           <a href="">
@@ -162,17 +172,18 @@
           </a>
         </div>
       </div>
+      <section class="burger-dropdown">
+        <div class="burger-items">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About me</a></li>
+            <li><a href="">CV</a></li>
+            <li><a href="">Projects</a></li>
+          </ul>
+        </div>
+      </section>
     </header>
-    <section class="burger-dropdown">
-      <div class="burger-items">
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About me</a></li>
-          <li><a href="">CV</a></li>
-          <li><a href="">Projects</a></li>
-        </ul>
-      </div>
-    </section>
+
     <section class="hero-background">
       <div class="hero-container">
         <div class="hero-card">
