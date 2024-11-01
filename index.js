@@ -11,7 +11,13 @@ $(".hero-link").on("mouseleave", function(event){
     $(".hero-link svg").animate({left: "0px"});
 })
 
+$(".project-end-text").on("mouseover", function(event){
+    $(".project-end-text svg").animate({left: "10px"});
+})
 
+$(".project-end-text").on("mouseleave", function(event){
+    $(".project-end-text svg").animate({left: "0px"});
+})
 
 
    	

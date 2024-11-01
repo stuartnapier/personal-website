@@ -319,6 +319,8 @@ header{
   .hero-picture {
     border-radius: 10px;
     width: 400px;
+    height:400px;
+    object-fit: cover; 
   }
 
   .hero-link > svg {
@@ -361,6 +363,7 @@ header{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     column-gap: 2.5%;
+    margin-bottom: 20px;
 }
 
  
@@ -478,7 +481,14 @@ header{
     color: black;
 }
 
+.project-end-text{
+    font-size: 1.25rem;
+    font-family: 'Noto Sans', sans-serif;
+}
 
+.project-end-text > svg {
+    position: relative;
+  }
 /* Large screen and above */
 
 /* Large screen - laptop */
